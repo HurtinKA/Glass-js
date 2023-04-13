@@ -5,5 +5,5 @@
 <li>Simplify WebGL2 syntax</li>
 <li>Make error finding and debugging easier</li>
 </ul>
-Use the following link to load the library into your webpage</br>
+Use the following link to load the library into your webpage:</br>
 <l>https://cdn.jsdelivr.net/gh/HurtinKA/Glass-js@latest/Main.js</l></br>
