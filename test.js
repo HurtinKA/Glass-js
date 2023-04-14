@@ -1,3 +1,3 @@
-import Glass from './Main.js';
-
-Glass.test = 0;
+export default function(Glass){
+  Glass.test = 0;
+};
