@@ -1,1 +1,2 @@
-var Glass = {};
+const Glass = {};
+export default Glass;
