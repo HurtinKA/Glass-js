@@ -158,8 +158,8 @@ var Glass = {};
         ctx.gl.bufferData(buffer.type,data,buffer.hint);
         buffer.length = data.length;
     };
-
-
+    
+    
     Glass.createRead = function(structure){
         let stride = 0;
         for (let i=0; i<structure.length; i+=2){
@@ -183,23 +183,23 @@ var Glass = {};
             f();
         });
     };
-
-
+    
+    
     Glass.uniform = function(location,value){
         location.function(value);
     };
-
-
+    
+    
     Glass.clear = function(){
         ctx.gl.clear(constants.COLOR_BUFFER_BIT);
     };
-    Glass.draw = function(range,index){
+    Glass.draw = function(length,index){
         if (index!=void 0){
             ctx.gl.bindBuffer(index.type,index.glBuffer);
-            ctx.gl.drawElements(constants.TRIANGLES,range[1],constants.UNSIGNED_SHORT,range[0]);
+            ctx.gl.drawElements(constants.TRIANGLES,length,constants.UNSIGNED_SHORT,0);
         }
         else{
-            ctx.gl.drawArrays(constants.TRIANGLES,range[0],range[1]);
+            ctx.gl.drawArrays(constants.TRIANGLES,0,length);
         }
     };
 })(Glass||(Glass={}));
