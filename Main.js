@@ -18,7 +18,9 @@ var Glass = {};
         const context = {};
 
         context.canvas = canvas;
-        context.gl = canvas.getContext('webgl2');
+        context.gl = canvas.getContext('webgl2',{
+            preserveDrawingBuffer:true
+        });
         context.gl.clearColor(0,0,0,1);
 
         return context;
